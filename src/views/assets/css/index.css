@@ -1,0 +1,532 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+@font-face {
+  font-family: ABeeZee;
+  src: url("./fonts/ABeeZee/ABeeZee-Regular.ttf");
+}
+.ABeeZee{
+  font-family: ABeeZee;
+}
+@font-face {
+  font-family: Abel;
+  src: url("./fonts/Abel/Abel-Regular.ttf");
+}
+.Abel{
+  font-family: Abel;
+}
+@font-face {
+  font-family: AbrilFatface;
+  src: url("./fonts/Abril_Fatface/AbrilFatface-Regular.ttf");
+}
+.AbrilFatface{
+  font-family: AbrilFatface;
+}
+@font-face {
+  font-family: Acme;
+  src: url("./fonts/Acme/Acme-Regular.ttf");
+}
+.Acme{
+  font-family: Acme;
+}
+@font-face {
+  font-family: Alegreya;
+  src: url("./fonts/Alegreya/static/Alegreya-Regular.ttf");
+}
+.Alegreya{
+  font-family: Alegreya;
+}
+@font-face {
+  font-family: Amaranth;
+  src: url("./fonts/Amaranth/Amaranth-Regular.ttf");
+}
+.Amaranth{
+  font-family: Amaranth;
+}
+@font-face {
+  font-family: Anton;
+  src: url("./fonts/Anton/Anton-Regular.ttf");
+}
+.Anton{
+  font-family: Anton;
+}
+@font-face {
+  font-family: ArchivoBlack;
+  src: url("./fonts/ArchivoBlack/ArchivoBlack-Regular.ttf");
+}
+.ArchivoBlack{
+  font-family: ArchivoBlack;
+}
+@font-face {
+  font-family: ArchivoNarrow;
+  src: url("./fonts/ArchivoNarrow/static/ArchivoNarrow-Regular.ttf");
+}
+.ArchivoNarrow{
+  font-family: ArchivoNarrow;
+}
+@font-face {
+  font-family: Arimo;
+  src: url("./fonts/Arimo/static/Arimo-Regular.ttf");
+}
+.Arimo{
+  font-family: Arimo;
+}
+@font-face {
+  font-family: Arvo;
+  src: url("./fonts/Arvo/Arvo-Regular.ttf");
+}
+.Arvo{
+  font-family: Arvo;
+}
+@font-face {
+  font-family: Asap;
+  src: url("./fonts/Asap/static/Asap-Regular.ttf");
+}
+.Asap{
+  font-family: Asap;
+}
+@font-face {
+  font-family: Bahiana;
+  src: url("./fonts/Bahiana/Bahiana-Regular.ttf");
+}
+.Bahiana{
+  font-family: Bahiana;
+}
+@font-face {
+  font-family: BerkshireSwash;
+  src: url("./fonts/BerkshireSwash/BerkshireSwash-Regular.ttf");
+}
+.BerkshireSwash{
+  font-family: BerkshireSwash;
+}
+@font-face {
+  font-family: Bitter;
+  src: url("./fonts/Bitter/static/Bitter-Regular.ttf");
+}
+.Bitter{
+  font-family: Bitter;
+}
+@font-face {
+  font-family: BreeSerif;
+  src: url("./fonts/Bree_Serif/BreeSerif-Regular.ttf");
+}
+.BreeSerif{
+  font-family: BreeSerif;
+}
+@font-face {
+  font-family: Bungee;
+  src: url("./fonts/Bungee/Bungee-Regular.ttf");
+}
+.Bungee{
+  font-family: Bungee;
+}
+@font-face {
+  font-family: Cabin;
+  src: url("./fonts/Cabin/static/Cabin-Regular.ttf");
+}
+.Cabin{
+  font-family: Cabin;
+}
+@font-face {
+  font-family: CabinSketch;
+  src: url("./fonts/Cabin_Sketch/CabinSketch-Regular.ttf");
+}
+.CabinSketch{
+  font-family: CabinSketch;
+}
+@font-face {
+  font-family: Catamaran;
+  src: url("./fonts/Catamaran/static/Catamaran-Regular.ttf");
+}
+.Catamaran{
+  font-family: Catamaran;
+}
+@font-face {
+  font-family: Chewy;
+  src: url("./fonts/Chewy/Chewy-Regular.ttf");
+}
+.Catamaran{
+  font-family: Chewy;
+}
+@font-face {
+  font-family: Cinzel;
+  src: url("./fonts/Cinzel/static/Cinzel-Regular.ttf");
+}
+.Cinzel{
+  font-family: Cinzel;
+}
+@font-face {
+  font-family: Creepster;
+  src: url("./fonts/Creepster/Creepster-Regular.ttf");
+}
+.Creepster{
+  font-family: Creepster;
+}
+@font-face {
+  font-family: CrimsonText;
+  src: url("./fonts/Crimson_Text/CrimsonText-Regular.ttf");
+}
+.CrimsonText{
+  font-family: CrimsonText;
+}
+@font-face {
+  font-family: Cuprum;
+  src: url("./fonts/Cuprum/static/Cuprum-Regular.ttf");
+}
+.Cuprum{
+  font-family: Cuprum;
+}
+@font-face {
+  font-family: CutiveMono;
+  src: url("./fonts/Cutive_Mono/CutiveMono-Regular.ttf");
+}
+.CutiveMono{
+  font-family: CutiveMono;
+}
+@font-face {
+  font-family: DancingScript;
+  src: url("./fonts/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+.DancingScript{
+  font-family: DancingScript;
+}
+@font-face {
+  font-family: DidactGothic;
+  src: url("./fonts/Didact_Gothic/DidactGothic-Regular.ttf");
+}
+.DidactGothic{
+  font-family: DidactGothic;
+}
+@font-face {
+  font-family: Dosis;
+  src: url("./fonts/Dosis/static/Dosis-Regular.ttf");
+}
+.Dosis{
+  font-family: Dosis;
+}
+@font-face {
+  font-family: EBGaramond;
+  src: url("./fonts/EB_Garamond/static/EBGaramond-Regular.ttf");
+}
+.EBGaramond{
+  font-family: EBGaramond;
+}
+@font-face {
+  font-family: Exo;
+  src: url("./fonts/Exo/static/Exo-Regular.ttf");
+}
+.Exo{
+  font-family: Exo;
+}
+@font-face {
+  font-family: Exo2;
+  src: url("./fonts/Exo_2/static/Exo2-Regular.ttf");
+}
+.Exo2{
+  font-family: Exo2;
+}
+@font-face {
+  font-family: FiraSans;
+  src: url("./fonts/Fira_Sans/FiraSans-Regular.ttf");
+}
+.FiraSans{
+  font-family: FiraSans;
+}
+@font-face {
+  font-family: FontdinerSwanky;
+  src: url("./fonts/Fontdiner_Swanky/FontdinerSwanky-Regular.ttf");
+}
+.FontdinerSwanky{
+  font-family: FontdinerSwanky;
+}
+@font-face {
+  font-family: FrancoisOne;
+  src: url("./fonts/Francois_One/FrancoisOne-Regular.ttf");
+}
+.FrancoisOne{
+  font-family: FrancoisOne;
+}
+@font-face {
+  font-family: FrederickatheGreat;
+  src: url("./fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf");
+}
+.FrederickatheGreat{
+  font-family: FrederickatheGreat;
+}
+@font-face {
+  font-family: FugazOne;
+  src: url("./fonts/FugazOne/FugazOne-Regular.ttf");
+}
+.FugazOne{
+  font-family: FugazOne;
+}
+@font-face {
+  font-family: Geo;
+  src: url("./fonts/Geo/static/Georama-Regular.ttf");
+}
+.Geo{
+  font-family: Geo;
+}
+@font-face {
+  font-family: FjallaOne;
+  src: url("./fonts/Fjalla_One/FjallaOne-Regular.ttf");
+}
+.FjallaOne{
+  font-family: FjallaOne;
+}
+@font-face {
+  font-family: FjallaOne;
+  src: url("./fonts/Fjalla_One/FjallaOne-Regular.ttf");
+}
+.FjallaOne{
+  font-family: FjallaOne;
+}
+@font-face {
+  font-family: FjallaOne;
+  src: url("./fonts/Fjalla_One/FjallaOne-Regular.ttf");
+}
+.FjallaOne{
+  font-family: FjallaOne;
+}
+@font-face {
+  font-family: FjallaOne;
+  src: url("./fonts/Fjalla_One/FjallaOne-Regular.ttf");
+}
+.FjallaOne{
+  font-family: FjallaOne;
+}
+#dropzone{
+    height: 100vh;
+}
+.placeholder{
+    z-index: +9999;
+}
+.editable-component {
+    position: relative;
+  }
+  
+  .edit-code-button {
+    background-color: rgba(68, 68, 68, 0.6);
+    cursor: grabbing;
+  }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat&family=Poppins&family=Rubik:wght@300;400&display=swap');
+.maintabs{
+  width: 50px;
+  height: 100vh;
+  background-color: #0d0e12 !important;
+}
+.nav-pills .nav-link.active{
+  background-color: #1c1c21 !important;
+  border-radius: 0;
+}
+.secontTabMain{
+
+  background-color: #1c1c21 !important;
+}
+.maintabscontent ul li{
+  font-size: 15px;
+
+}
+.supra-btn{
+border-bottom: 1px solid #555555 !important;
+}
+.nice-scroll li{
+  border-bottom: 1px solid #3a3a40db;
+  font-size:14px !important;
+}
+.maintabs button{
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  width: 50px !important;
+  padding:  0;
+}
+.activaNavigate{
+  font-size: 16px;
+}
+.secontTabMain{
+  width: 173px !important;
+  height: 100vh;
+}
+.secontTabContent{
+
+  width: 235px;
+
+}
+.secontTabContent .tab-pane{
+  height: 100vh;
+  background-color: #1c1c21db !important;
+  overflow-y: scroll;
+}
+.nav-pills .navLink.active{
+
+  background-color: #1c1c21db !important;
+}
+.bgBlue{
+  background-color: #d0e0f2;
+}
+.w-30{
+  width: 30% !important;
+}
+.cardHeight{
+  height: 70px;
+  /* object-fit: cover; */
+  object-position: center;
+  
+}
+.nav-pills .nav-link:hover{
+  background-color: #1c1c21;
+  border-radius: 0;
+}
+.navLink:hover{
+  background-color: #3c3c40 !important;
+}
+.navLink .nav-link:hover{
+  background-color: #3c3c40 !important;
+}
+.navLink .nav-link.active{
+  background-color: #3c3c40 !important;
+}
+.navLink.active{
+  background-color: #3c3c40 !important;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.add-section {
+  background-color: rgba(0, 192, 255, 0.9);
+  top: 0;
+  left: 0;
+  display: none !important;
+}
+.moveScroll:hover .add-section{
+ display: flex !important;
+}
+.text-grey{
+  color: #aaa;
+}
+.fs-12{
+  font-size: 12px;
+}
+.fontmenu{
+  overflow-y: scroll;
+  height: 60vh;
+  background-color: #1c1c21;
+  border-radius: 0;
+}
+.fontmenu a{
+  color: #888;
+}
+.dropdownBtn{
+  border-radius: 0;
+  border-bottom: 1px solid rgb(67, 68, 68);
+}
+.formInput{
+  width: 100px;
+  border-radius: 0 !important;
+  height: 32px;
+}
+.formInput:focus{
+  background-color: #282828;
+  outline: 0;
+  box-shadow: none;
+}
+.bagDark{
+  background-color: #1c1c21;
+}
+.bgsecondary{
+  background-color: #555555;
+}
+.bgsecondary:focus{
+  background-color: #555555;
+}
+.wrapper{
+  height: 150px;
+  padding: 5px 0;
+  background-color: #1c1c21;
+  border-radius: 1px;
+}
+.wrapper input {
+  padding: 10px;
+  height: 35px;
+  background-color:#1c1c21;
+  color: #fff;
+  border: none;
+  border-radius: 1px;
+  outline: none;
+}
+.wrapper input.top ,.wrapper input.bottom ,.wrapper input.center-center , .wrapper input.left ,.wrapper input.right{
+  width: 33%;
+}
+.center-center {
+  height: 31px;
+  width: 33%;
+  margin-top: 2px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAHhJREFUOBGlzksKgDAMBNBGPIB0p0vvfyhXuvMKcWZREOknMQNDS2EeFVVdU0ob6s2NwSEiKlxGoRkAMLlw0vP+KHM0oXuBcD/56EwmsqAhiAgTggoSgt7Ib+iL/IJqiBtqIS6oh5ihEWKCLMgQsiJdyIM0IS9ShR6EP1g0y2RB+wAAAABJRU5ErkJggg==);
+  background-size: 7px 7px;
+  background-position: left ;
+}
+.wrapper input.top , .wrapper input.bottom{
+  margin: 0 33.33% !important;
+}
+.input::placeholder , .input{
+  font-size: 12px;
+}
+.backgroundImage{
+  height: 100px;
+  width: 100%;
+  margin: auto;
+  margin-top: 2px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAHhJREFUOBGlzksKgDAMBNBGPIB0p0vvfyhXuvMKcWZREOknMQNDS2EeFVVdU0ob6s2NwSEiKlxGoRkAMLlw0vP+KHM0oXuBcD/56EwmsqAhiAgTggoSgt7Ib+iL/IJqiBtqIS6oh5ihEWKCLMgQsiJdyIM0IS9ShR6EP1g0y2RB+wAAAABJRU5ErkJggg==);
+  background-size: 7px 7px;
+  background-position: left ;
+}
+.bg-444444{
+  background-color: #444444;
+}
+.backPosition div{
+  width: 61px;
+  height: 40px;
+}
+.backPosition div:hover{
+  background-color: #00c0ffe6;
+}
+.textShadowInput input{
+  width: 24% !important;
+}
+.formColor ,.formColor:focus{
+  background-color: #eeeeee;
+  border-radius: 0 !important;
+  height: 34px !important;
+}
+.textShadowInput input:focus{
+  box-shadow: none;
+  outline: 0 !important;
+}
+.centerBorder{
+  border: 2px solid #3a3a40db;
+  width: 33%;
+}
+.lightolor , .lightolor:focus{
+  background-color: #af9f8c;
+  border-radius: 0;
+}
+.lightbluecolor , .lightbluecolor:focus{
+  background-color: #91989f;
+  border-radius: 0;
+}
+input::placeholder{
+  font-size: 12px;
+}
+.navLink button{
+  padding: 16px 10px !important
+}
+.maintabscontent{
+  left: 50px;
+  z-index: +99;
+}
+.dropdown-item{
+  color: #aaa !important;
+}
+.borderDark{
+  border: 1px solid #cdcdcd !important;
+}

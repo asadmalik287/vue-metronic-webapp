@@ -19,7 +19,7 @@
           data-kt-menu-placement="bottom-end"
           data-kt-menu-flip="top-end"
         >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+          <!-- <KTIcon icon-name="category" icon-class="fs-2" /> -->
         </button>
         <Dropdown2></Dropdown2>
         <!--end::Menu-->

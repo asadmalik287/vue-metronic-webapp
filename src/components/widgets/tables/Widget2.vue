@@ -1,27 +1,20 @@
 <template>
   <!--begin::Tables Widget 2-->
-  <div :class="widgetClasses" class="card">
+  <div class="card">
     <!--begin::Header-->
     <div class="card-header border-0 pt-5">
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Latest Arrivals</span>
 
-        <span class="text-muted mt-1 fw-semobold fs-7"
-          >More than 100 new products</span
-        >
+        <span class="text-muted mt-1 fw-semobold fs-7">More than 100 new products</span>
       </h3>
       <div class="card-toolbar">
         <!--begin::Menu-->
-        <button
-          type="button"
-          class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-flip="top-end"
-        >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+        <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+          data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
+          <!-- <KTIcon icon-name="category" icon-class="fs-2" /> -->
         </button>
-        <Dropdown1></Dropdown1>
+        <!-- <Dropdown1></Dropdown1> -->
         <!--end::Menu-->
       </div>
     </div>
@@ -47,58 +40,35 @@
 
           <!--begin::Table body-->
           <tbody>
-            <template v-for="(item, index) in items" :key="index">
-              <tr>
-                <td>
-                  <div class="symbol symbol-50px me-2">
-                    <span class="symbol-label">
-                      <img
-                        :src="item.image"
-                        class="h-50 align-self-center"
-                        alt=""
-                      />
-                    </span>
-                  </div>
-                </td>
-                <td>
-                  <a
-                    href="#"
-                    class="text-dark fw-bold text-hover-primary mb-1 fs-6"
-                    >{{ item.info.title }}</a
-                  >
-                  <span class="text-muted fw-semobold d-block fs-7">{{
-                    item.info.description
-                  }}</span>
-                </td>
-                <td class="text-end">
-                  <template
-                    v-for="(item1, index1) in item.badges"
-                    :key="index1"
-                  >
-                    <span
-                      :class="`badge-light-${item1.color}`"
-                      class="badge fw-semobold me-1"
-                      >{{ item1.label }}</span
-                    >
-                  </template>
-                </td>
-                <td class="text-end">
-                  <span class="text-muted fw-semobold">
-                    {{ item.remarks }}
+            <tr>
+              <td>
+                <div class="symbol symbol-50px me-2">
+                  <span class="symbol-label">
+                    <img src="../../../../public/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center" alt="" />
                   </span>
-                </td>
-                <td class="text-end">
-                  <a
-                    href="#"
-                    class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
-                  >
-                    <KTIcon icon-name="arrow-right" icon-class="fs-2" />
-                  </a>
-                </td>
-              </tr>
-            </template>
+                </div>
+              </td>
+              <td>
+                <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">Top Authors</a>
+                <span class="text-muted fw-semobold d-block fs-7">Successful Fellas</span>
+              </td>
+              <td class="text-end">
+                <span class="badge fw-semobold me-1 badge-light-danger">Angular</span>
+                <span class="badge fw-semobold me-1 badge-light-info">php</span>
+              </td>
+              <td class="text-end">
+                <span class="text-muted fw-semobold">
+                  4600 Users
+                </span>
+              </td>
+              <td class="text-end">
+                <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
+                  <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                </a>
+              </td>
+            </tr>
           </tbody>
-          <!--end::Table body-->
+            <!--end::Table body-->
         </table>
         <!--end::Table-->
       </div>

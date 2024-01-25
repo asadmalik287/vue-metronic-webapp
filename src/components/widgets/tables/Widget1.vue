@@ -1,6 +1,6 @@
 <template>
   <!--begin::Tables Widget 1-->
-  <div :class="widgetClasses" class="card">
+  <div class="card">
     <!--begin::Header-->
     <div class="card-header border-0 pt-5">
       <h3 class="card-title align-items-start flex-column">
@@ -44,13 +44,13 @@
 
           <!--begin::Table body-->
           <tbody>
-            <template v-for="(item, index) in items" :key="index">
+          
               <tr>
                 <th>
                   <div class="symbol symbol-50px me-2">
                     <span class="symbol-label">
                       <img
-                        :src="item.image"
+                        src="../../../../public/media/svg/brand-logos/plurk.svg"
                         class="h-50 align-self-center"
                         alt=""
                       />
@@ -62,30 +62,28 @@
                   <a
                     href="#"
                     class="text-dark fw-bold text-hover-primary mb-1 fs-6"
-                    >{{ item.info.title }}</a
+                    >Top Authors</a
                   >
-                  <span class="text-muted fw-semobold d-block fs-7">{{
-                    item.info.description
-                  }}</span>
+                  <span class="text-muted fw-semobold d-block fs-7">Successful Fellas</span>
                 </td>
 
                 <td>
                   <div class="d-flex flex-column w-100 me-2">
                     <div class="d-flex flex-stack mb-2">
                       <span class="text-muted me-2 fs-7 fw-semobold">
-                        {{ item.progress.value }}%
+                        70%
                       </span>
                     </div>
 
                     <div class="progress h-6px w-100">
                       <div
-                        :class="`
+                        class="
                           progress-bar
-                          bg-${item.progress.color}
-                        `"
+                          bg-primary
+                        "
                         role="progressbar"
-                        :style="`width: ${item.progress.value}%`"
-                        :aria-valuenow="item.progress.value"
+                        style="width: 70%"
+                        aria-valuenow="70"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
@@ -102,7 +100,226 @@
                   </a>
                 </td>
               </tr>
-            </template>
+              <tr>
+                <th>
+                  <div class="symbol symbol-50px me-2">
+                    <span class="symbol-label">
+                      <img
+                        src="../../../../public/media/svg/brand-logos/plurk.svg"
+                        class="h-50 align-self-center"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                </th>
+
+                <td>
+                  <a
+                    href="#"
+                    class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                    >Top Authors</a
+                  >
+                  <span class="text-muted fw-semobold d-block fs-7">Successful Fellas</span>
+                </td>
+
+                <td>
+                  <div class="d-flex flex-column w-100 me-2">
+                    <div class="d-flex flex-stack mb-2">
+                      <span class="text-muted me-2 fs-7 fw-semobold">
+                        70%
+                      </span>
+                    </div>
+
+                    <div class="progress h-6px w-100">
+                      <div
+                        class="
+                          progress-bar
+                          bg-primary
+                        "
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="text-end">
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
+                  >
+                    <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <div class="symbol symbol-50px me-2">
+                    <span class="symbol-label">
+                      <img
+                        src="../../../../public/media/svg/brand-logos/plurk.svg"
+                        class="h-50 align-self-center"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                </th>
+
+                <td>
+                  <a
+                    href="#"
+                    class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                    >Top Authors</a
+                  >
+                  <span class="text-muted fw-semobold d-block fs-7">Successful Fellas</span>
+                </td>
+
+                <td>
+                  <div class="d-flex flex-column w-100 me-2">
+                    <div class="d-flex flex-stack mb-2">
+                      <span class="text-muted me-2 fs-7 fw-semobold">
+                        70%
+                      </span>
+                    </div>
+
+                    <div class="progress h-6px w-100">
+                      <div
+                        class="
+                          progress-bar
+                          bg-primary
+                        "
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="text-end">
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
+                  >
+                    <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <div class="symbol symbol-50px me-2">
+                    <span class="symbol-label">
+                      <img
+                        src="../../../../public/media/svg/brand-logos/plurk.svg"
+                        class="h-50 align-self-center"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                </th>
+
+                <td>
+                  <a
+                    href="#"
+                    class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                    >Top Authors</a
+                  >
+                  <span class="text-muted fw-semobold d-block fs-7">Successful Fellas</span>
+                </td>
+
+                <td>
+                  <div class="d-flex flex-column w-100 me-2">
+                    <div class="d-flex flex-stack mb-2">
+                      <span class="text-muted me-2 fs-7 fw-semobold">
+                        70%
+                      </span>
+                    </div>
+
+                    <div class="progress h-6px w-100">
+                      <div
+                        class="
+                          progress-bar
+                          bg-primary
+                        "
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="text-end">
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
+                  >
+                    <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <div class="symbol symbol-50px me-2">
+                    <span class="symbol-label">
+                      <img
+                        src="../../../../public/media/svg/brand-logos/plurk.svg"
+                        class="h-50 align-self-center"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                </th>
+
+                <td>
+                  <a
+                    href="#"
+                    class="text-dark fw-bold text-hover-primary mb-1 fs-6"
+                    >Top Authors</a
+                  >
+                  <span class="text-muted fw-semobold d-block fs-7">Successful Fellas</span>
+                </td>
+
+                <td>
+                  <div class="d-flex flex-column w-100 me-2">
+                    <div class="d-flex flex-stack mb-2">
+                      <span class="text-muted me-2 fs-7 fw-semobold">
+                        70%
+                      </span>
+                    </div>
+
+                    <div class="progress h-6px w-100">
+                      <div
+                        class="
+                          progress-bar
+                          bg-primary
+                        "
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="text-end">
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
+                  >
+                    <KTIcon icon-name="arrow-right" icon-class="fs-2" />
+                  </a>
+                </td>
+              </tr>
           </tbody>
           <!--end::Table body-->
         </table>

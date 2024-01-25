@@ -6,22 +6,15 @@
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Files</span>
 
-        <span class="text-muted mt-1 fw-semobold fs-7"
-          >Over 100 pending files</span
-        >
+        <span class="text-muted mt-1 fw-semobold fs-7">Over 100 pending files</span>
       </h3>
       <div class="card-toolbar">
         <!--begin::Menu-->
-        <button
-          type="button"
-          class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-flip="top-end"
-        >
-          <KTIcon icon-name="category" icon-class="fs-2" />
+        <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+          data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
+          <!-- <KTIcon icon-name="category" icon-class="fs-2" /> -->
         </button>
-        <Dropdown3></Dropdown3>
+        <!-- <Dropdown3></Dropdown3> -->
         <!--end::Menu-->
       </div>
     </div>
@@ -47,42 +40,32 @@
 
           <!--begin::Table body-->
           <tbody>
-            <template v-for="(item, index) in items" :key="index">
-              <tr>
-                <td>
-                  <div class="symbol symbol-50px me-2">
-                    <span
-                      :class="`bg-light-${item.color}`"
-                      class="symbol-label"
-                    >
-                      <KTIcon
-                        :icon-name="item.icon"
-                        :icon-class="`text-${item.color} fs-2x`"
-                      />
-                    </span>
-                  </div>
-                </td>
-                <td>
-                  <a
-                    href="#"
-                    class="text-dark fw-bold text-hover-primary mb-1 fs-6"
-                  >
-                    {{ item.title }}
-                  </a>
-                </td>
-                <td class="text-end text-muted fw-semobold">
-                  {{ item.technologies }}
-                </td>
-                <td class="text-end text-muted fw-semobold">
-                  {{ item.users }}
-                </td>
-                <td class="text-end text-dark fw-bold fs-6 pe-0">
-                  {{ item.size }}
-                </td>
-              </tr>
-            </template>
+            <tr>
+              <td>
+                <div class="symbol symbol-50px me-2">
+                  <span class="symbol-label bg-light-success">
+                    <i class="ki-outline ki-basket text-success fs-2x"><!--v-if--></i>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">
+                  Top Authors
+                </a>
+              </td>
+              <td class="text-end text-muted fw-semobold">
+                AngularJS, C#
+              </td>
+
+              <td class="text-end text-muted fw-semobold">
+                4600 Users
+              </td>
+              <td class="text-end text-dark fw-bold fs-6 pe-0">
+                5.4MB
+              </td>
+            </tr>
           </tbody>
-          <!--end::Table body-->
+            <!--end::Table body-->
         </table>
         <!--end::Table-->
       </div>

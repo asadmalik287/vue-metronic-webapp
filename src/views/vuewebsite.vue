@@ -54,7 +54,7 @@
                       <button class="nav-link text-white w-100 text-start" id="v-pills-messages-tab1"
                         data-bs-toggle="pill" data-bs-target="#v-pills-messages1" type="button" role="tab"
                         aria-controls="v-pills-messages1" aria-selected="false">
-                        Menu
+                   Table 
                       </button>
                     </li>
                   </ul>
@@ -253,78 +253,6 @@
                       <li data-type="ListSeven" draggable="true" @dragstart="handleDragStart"
                         class="p-2 h-auto cursor-pointer position-relative moveScroll">
                         <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu7.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListEight" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu8.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListNine" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu9.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListTen" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu10.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListEleven" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu11.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListTwelve" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu12.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListThirteen" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu13.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListFourteen" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu14.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListFifteen" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu15.png" alt="..." />
-                        <div
-                          class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
-                          <img src="./assets/images/plus.svg" alt="..." />
-                        </div>
-                      </li>
-                      <li data-type="ListSixteen" draggable="true" @dragstart="handleDragStart"
-                        class="p-2 cursor-pointer position-relative moveScroll">
-                        <img class="w-100 h-auto rounded cardHeight" src="./assets/images/menu16.png" alt="..." />
                         <div
                           class="w-100 h-100 position-absolute d-flex align-items-center justify-content-center add-section rounded">
                           <img src="./assets/images/plus.svg" alt="..." />
@@ -1574,15 +1502,15 @@ import ListFour from "./webbuildcom/ListFour.vue";
 import ListFive from "./webbuildcom/ListFive.vue";
 import ListSix from "./webbuildcom/ListSix.vue";
 import ListSeven from "./webbuildcom/ListSeven.vue";
-import ListEight from "./webbuildcom/ListEight.vue";
-import ListNine from "./webbuildcom/ListNine.vue";
-import ListTen from "./webbuildcom/ListTen.vue";
-import ListEleven from "./webbuildcom/ListEleven.vue";
-import ListTwelve from "./webbuildcom/ListTwelve.vue";
-import ListThirteen from "./webbuildcom/ListThirteen.vue";
-import ListFourteen from "./webbuildcom/ListFourteen.vue";
-import ListFifteen from "./webbuildcom/ListFifteen.vue";
-import ListSixteen from "./webbuildcom/ListSixteen.vue";
+// import ListEight from "./webbuildcom/ListEight.vue";
+// import ListNine from "./webbuildcom/ListNine.vue";
+// import ListTen from "./webbuildcom/ListTen.vue";
+// import ListEleven from "./webbuildcom/ListEleven.vue";
+// import ListTwelve from "./webbuildcom/ListTwelve.vue";
+// import ListThirteen from "./webbuildcom/ListThirteen.vue";
+// import ListFourteen from "./webbuildcom/ListFourteen.vue";
+// import ListFifteen from "./webbuildcom/ListFifteen.vue";
+// import ListSixteen from "./webbuildcom/ListSixteen.vue";
 import Codemirror from "codemirror-editor-vue3";
 import "codemirror/addon/display/placeholder.js";
 import "codemirror/mode/javascript/javascript.js";

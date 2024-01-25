@@ -5,37 +5,23 @@
     <div class="card-header border-0 pt-5">
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-bold fs-3 mb-1">Authors Earnings</span>
-        <span class="text-muted mt-1 fw-semobold fs-7"
-          >More than 400 new authors</span
-        >
+        <span class="text-muted mt-1 fw-semobold fs-7">More than 400 new authors</span>
       </h3>
       <div class="card-toolbar">
         <ul class="nav">
           <li class="nav-item">
-            <a
-              class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary active fw-bold px-4 me-1"
-              data-bs-toggle="tab"
-              href="#kt_table_widget_6_tab_1"
-              >Month</a
-            >
+            <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary active fw-bold px-4 me-1"
+              data-bs-toggle="tab" href="#kt_table_widget_6_tab_1">Month</a>
           </li>
 
           <li class="nav-item">
-            <a
-              class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4 me-1"
-              data-bs-toggle="tab"
-              href="#kt_table_widget_6_tab_2"
-              >Week</a
-            >
+            <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4 me-1"
+              data-bs-toggle="tab" href="#kt_table_widget_6_tab_2">Week</a>
           </li>
 
           <li class="nav-item">
-            <a
-              class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4"
-              data-bs-toggle="tab"
-              href="#kt_table_widget_6_tab_3"
-              >Day</a
-            >
+            <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4"
+              data-bs-toggle="tab" href="#kt_table_widget_6_tab_3">Day</a>
           </li>
         </ul>
       </div>
@@ -47,11 +33,7 @@
       <div class="tab-content">
         <template v-for="(item, index) in items" :key="index">
           <!--begin::Tap pane-->
-          <div
-            :class="[index === 0 && 'active show']"
-            class="tab-pane fade"
-            :id="`kt_table_widget_6_tab_${index + 1}`"
-          >
+          <div :class="[index === 0 && 'active show']" class="tab-pane fade" :id="`kt_table_widget_6_tab_${index + 1}`">
             <!--begin::Table container-->
             <div class="table-responsive">
               <!--begin::Table-->
@@ -74,44 +56,28 @@
                       <td>
                         <div class="symbol symbol-50px me-2">
                           <span class="symbol-label">
-                            <img
-                              :src="item1.image"
-                              class="h-75 align-self-end"
-                              alt=""
-                            />
+                            <img :src="item1.image" class="h-75 align-self-end" alt="" />
                           </span>
                         </div>
                       </td>
                       <td>
-                        <a
-                          href="#"
-                          class="text-dark fw-bold text-hover-primary mb-1 fs-6"
-                          >{{ item1.user.name }}</a
-                        >
+                        <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ item1.user.name }}</a>
                         <span class="text-muted fw-semobold d-block">{{
                           item1.user.position
                         }}</span>
                       </td>
                       <td>
-                        <span class="text-muted fw-semobold d-block fs-7"
-                          >Paid</span
-                        >
+                        <span class="text-muted fw-semobold d-block fs-7">Paid</span>
                         <span class="text-dark fw-bold d-block fs-5">{{
                           item1.paid
                         }}</span>
                       </td>
                       <td class="text-end">
-                        <span
-                          :class="`text-${item1.progress.color}`"
-                          class="fs-7 fw-bold"
-                          >{{ item1.progress.value }}</span
-                        >
+                        <span :class="`text-${item1.progress.color}`" class="fs-7 fw-bold">{{ item1.progress.value
+                        }}</span>
                       </td>
                       <td class="text-end">
-                        <a
-                          href="#"
-                          class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
-                        >
+                        <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
                           <KTIcon icon-name="arrow-right" icon-class="fs-2" />
                         </a>
                       </td>

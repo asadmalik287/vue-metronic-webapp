@@ -1970,7 +1970,6 @@ export default {
   font-weight: var(--bodyfontWeight);
   line-height: var(--bodyfontHeight);
   padding: var(--body-padding-top) var(--body-padding-right) var(--body-padding-bottom) var(--body-padding-left) ;
-  
   background: var(--bodyBackground);
   background-repeat: var(--bodybackgroundRepeat);
   background-position: var(--bodybackgroundPosition);

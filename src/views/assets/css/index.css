@@ -530,3 +530,7 @@ input::placeholder{
 .borderDark{
   border: 1px solid #cdcdcd !important;
 }
+select.form-select{
+  padding: 0 !important;
+  padding-left: 10px !important;
+}

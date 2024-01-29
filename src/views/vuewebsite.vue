@@ -829,6 +829,8 @@
                           <li class="p-2">
                             <p class="fs-12 mb-0 text-grey pb-2">Background Position</p>
                             <select
+                             v-model="backgroundPosition"
+                                  @change="updateStyling"
                               class="form-select bagDark border-0 text-white formInput w-100 fs-12"
                               aria-label="Default select example"
                             >
@@ -845,7 +847,7 @@
                               class="form-select bagDark border-0 text-white formInput w-100 fs-12"
                               aria-label="Default select example"
                             >
-                              <option selected>-</option>
+                              <option selected disabled>-</option>
                               <option value="1" class="fs-12">Repeat</option>
                               <option value="2" class="fs-12">Repeat-x</option>
                               <option value="3" class="fs-12">Repeat-y</option>
@@ -2477,6 +2479,8 @@ export default {
       bodyFontSize: "14",
       bodyLineHeight: "1",
       bodyFontColor: "#555555",
+      backgroundRepeat: "repeat",
+      backgroundPosition: 'center',
       bodyPadding: {
         top: 0,
         right: 0,
@@ -2652,6 +2656,10 @@ export default {
       document.documentElement.style.setProperty(
         "--bodyfontSize",
         `${this.bodyFontSize}px`
+      );
+       document.documentElement.style.setProperty(
+        "--bodybackgroundPosition",
+        `${this.backgroundPosition}`
       );
       // Body Padding
       const { top, right, bottom, left } = this.bodyPadding;

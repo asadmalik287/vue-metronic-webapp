@@ -406,8 +406,7 @@
                               <p class="fs-12 mb-0 text-grey">Font Color</p>
                               <input type="color" v-model="bodyFontColor" @input="updateStyling"
                                 class="form-control form-control-color p-0 formInput border-0 fs-12"
-                                style='border-radius:0px !important;'
-                                value="#555555" title="Choose your color" />
+                                style='border-radius:0px !important;' value="#555555" title="Choose your color" />
                             </div>
                           </li>
                           <li class="p-2">
@@ -427,28 +426,30 @@
                             </div>
                           </li>
                           <li class="p-2">
-                            <p class="fs-12 mb-0 text-grey">Background</p>
-                             <select
-                              class="form-select bagDark border-0 text-white formInput w-100 fs-12 mb-3"
+                            <!-- <p class="fs-12 mb-0 text-grey">Background</p> -->
+                            <!-- <select @change="selectBackground" class="form-select bagDark border-0 text-white formInput w-100 fs-12 mb-3"
                               aria-label="Default select example">
                               <option selected disabled>-</option>
-                              <option value="Background-color" class="fs-12">Background Color</option>
-                              <option value="Background-image" class="fs-12">Background Image</option>
-                            </select>
-                             <!-- Background Color -->
-                             <input type="color"
+                              <option value="backgroundcolor" class="fs-12">Background Color</option>
+                              <option value="backgroundimage" class="fs-12">Background Image</option>
+                            </select> -->
+                            <!-- Background Color -->
+                            <div>
+                              <p class="fs-12 mb-2 text-grey">Background Color</p>
+                              <input type="color" v-model="backgroundRepeat" @change="updateStyling"
                                 class="w-100 mb-3 form-control form-control-color p-0 formInput bgsecondary border-0 fs-12"
                                 value="#555555" title="Choose your color" />
-                             <!-- Background Image -->
+                            </div>
+                            <!-- Background Image -->
 
-                            <div class="backgroundImage "></div>
                             <div class="mt-3 mb-3">
-                              <input class="form-control bagDark formInput w-100 border-0 fs-12 text-white"
-                                accept="image/*" @change="updateBackgroundImage" type="file" />
-                                <img v-if="
-                                BackgroundImage" :src="bodyBackgroundImage" alt="Background Image Preview" style="max-width: 100%; max-height: 150px; margin-top: 10px;">
-                            </div> 
-                           
+                              <p class="fs-12 mb-2 text-grey">Background Image</p>
+
+                              <input type="file" accept="image/*" @change="updateBackgroundImage">
+                              <img v-if="bodyBackgroundImage" :src="bodyBackgroundImage" alt="Background Image Preview"
+                                style="max-width: 100%; max-height: 150px; margin-top: 10px;">
+                            </div>
+
                           </li>
                           <li class="p-2">
                             <p class="fs-12 mb-0 text-grey pb-2">Background Position</p>
@@ -946,7 +947,7 @@
                         </li>
                         <li class="p-2 mt-1">
                           <p class="fs-12 pb-1 mb-0">Text Shadow</p>
-                           <div class="d-flex align-items-center justify-content-between textShadowInput">
+                          <div class="d-flex align-items-center justify-content-between textShadowInput">
                             <input v-model="textH3Shadow.top" @input="updateStyling" type="text" placeholder="-" value=""
                               class="bagDark border-0 p-2 text-white fs-12" />
                             <input v-model="textH3Shadow.right" @input="updateStyling" type="text" placeholder="-"
@@ -1081,7 +1082,7 @@
                         </li>
                         <li class="p-2 mt-1">
                           <p class="fs-12 pb-1 mb-0">Text Shadow</p>
-                           <div class="d-flex align-items-center justify-content-between textShadowInput">
+                          <div class="d-flex align-items-center justify-content-between textShadowInput">
                             <input v-model="textH4Shadow.top" @input="updateStyling" type="text" placeholder="-" value=""
                               class="bagDark border-0 p-2 text-white fs-12" />
                             <input v-model="textH4Shadow.right" @input="updateStyling" type="text" placeholder="-"
@@ -1831,7 +1832,8 @@ export default {
         const reader = new FileReader();
         reader.onload = () => {
           this.bodyBackgroundImage = reader.result;
-          document.documentElement.style.setProperty("--body-background-image", `${reader.result}`);
+          document.documentElement.style.setProperty('--body-background-image', `url("${this.bodyBackgroundImage}")`);
+
           this.updateStyling();
         };
         reader.readAsDataURL(file);
@@ -1909,7 +1911,7 @@ export default {
         "--h1TextDeoration",
         `${this.h1TextDecoration}`
       );
-       // H2 Text Shadow
+      // H2 Text Shadow
       var { top, right, bottom, color } = this.textH2Shadow;
       document.documentElement.style.setProperty("--texth2-shadow-top", `${top}px`);
       document.documentElement.style.setProperty("--texth2-shadow-right", `${right}px`);
@@ -1988,13 +1990,13 @@ export default {
         "--h3TextDeoration",
         `${this.h3TextDecoration}`
       );
-             // H3 Text Shadow
+      // H3 Text Shadow
       var { top, right, bottom, color } = this.textH3Shadow;
       document.documentElement.style.setProperty("--texth3-shadow-top", `${top}px`);
       document.documentElement.style.setProperty("--texth3-shadow-right", `${right}px`);
       document.documentElement.style.setProperty("--texth3-shadow-bottom", `${bottom}px`);
       document.documentElement.style.setProperty("--texth3-shadow-color", `${color}`);
- 
+
       /////// h4 Properties
       document.documentElement.style.setProperty(
         "--h4fontSize", `
@@ -2028,14 +2030,14 @@ export default {
         "--h4TextDeoration",
         `${this.h4TextDecoration}`
       );
-            // H4 Text Shadow
+      // H4 Text Shadow
       var { top, right, bottom, color } = this.textH3Shadow;
       document.documentElement.style.setProperty("--texth4-shadow-top", `${top}px`);
       document.documentElement.style.setProperty("--texth4-shadow-right", `${right}px`);
       document.documentElement.style.setProperty("--texth4-shadow-bottom", `${bottom}px`);
       document.documentElement.style.setProperty("--texth4-shadow-color", `${color}`);
       //  Buttons
-       var { top, right, bottom, left } = this.buttonRadius;
+      var { top, right, bottom, left } = this.buttonRadius;
       document.documentElement.style.setProperty("--button-Radius-top", `${top}px`);
       document.documentElement.style.setProperty("--button-Radius-right", `${right}px`);
       document.documentElement.style.setProperty("--button-Radius-bottom", `${bottom}px`);
@@ -2405,9 +2407,9 @@ export default {
 
   --bodybackgroundSize: Auto;
   --body-padding-top: 0;
-  --body-padding-right:0;
-  --body-padding-bottom:0;
-  --body-padding-left:0;
+  --body-padding-right: 0;
+  --body-padding-bottom: 0;
+  --body-padding-left: 0;
 
 }
 
@@ -2418,7 +2420,7 @@ export default {
   font-weight: var(--bodyfontWeight);
   line-height: var(--bodyfontHeight);
   padding: var(--body-padding-top) var(--body-padding-right) var(--body-padding-bottom) var(--body-padding-left);
-  background: var(--bodyBackground);
+  background-color: var(--bodyBackground);
   background-image: var(--body-background-image);
   background-repeat: var(--bodybackgroundRepeat);
   background-position: var(--bodybackgroundPosition);
@@ -2429,9 +2431,9 @@ export default {
   --sectionBackgroundColor: #fff;
   --sectionBackgroundPosition: vertical;
   --section-margin-top: 0;
-    --section-margin-right:0;
-    --section-margin-bottom:0;
-    --section-margin-left:0;
+  --section-margin-right: 0;
+  --section-margin-bottom: 0;
+  --section-margin-left: 0;
 }
 
 section {

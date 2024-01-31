@@ -1737,6 +1737,24 @@ export default {
         bottom: '0',
         color: '0',
       },
+      textH2Shadow: {
+        top: '0',
+        right: '0',
+        bottom: '0',
+        color: '0',
+      },
+      textH3Shadow: {
+        top: '0',
+        right: '0',
+        bottom: '0',
+        color: '0',
+      },
+      textH4Shadow: {
+        top: '0',
+        right: '0',
+        bottom: '0',
+        color: '0',
+      },
       ///// Buttons Primary Properties
       buttonPrimFontColor: '#eee',
       buttonPrimFontColorHover: '#eee',

@@ -403,7 +403,7 @@
                           </li>
                           <li class="p-2">
                             <div class="d-flex align-items-center justify-content-between">
-                              <p class="fs-12 mb-0 text-grey">Font Colour</p>
+                              <p class="fs-12 mb-0 text-grey">Font Color</p>
                               <input type="color" v-model="bodyFontColor" @input="updateStyling"
                                 class="form-control form-control-color p-0 formInput bgsecondary border-0 fs-12"
                                 value="#555555" title="Choose your color" />
@@ -428,22 +428,56 @@
                           <li class="p-2">
                             <p class="fs-12 mb-0 text-grey">Background</p>
                              <select
-                              class="form-select bagDark border-0 text-white formInput w-100 fs-12"
+                              class="form-select bagDark border-0 text-white formInput w-100 fs-12 mb-3"
                               aria-label="Default select example">
                               <option selected disabled>-</option>
-                              <option value="Top" class="fs-12">Background Color</option>
-                              <option value="Bottom" class="fs-12">Background Image</option>
+                              <option value="Background-color" class="fs-12">Background Color</option>
+                              <option value="Background-image" class="fs-12">Background Image</option>
+                              <option value="Background-gradient" class="fs-12">Background Gradient</option>
                             </select>
+                             <!-- Background Color -->
                              <input type="color"
                                 class="w-100 mb-3 form-control form-control-color p-0 formInput bgsecondary border-0 fs-12"
                                 value="#555555" title="Choose your color" />
-                            <div class="backgroundImage"></div>
-                            <div class="mt-3">
+                             <!-- Background Image -->
+
+                            <div class="backgroundImage "></div>
+                            <div class="mt-3 mb-3">
                               <input class="form-control bagDark formInput w-100 border-0 fs-12 text-white"
                                 accept="image/*" @change="updateBackgroundImage" type="file" />
-                                <img v-if="bodyBackgroundImage" :src="bodyBackgroundImage" alt="Background Image Preview" style="max-width: 100%; max-height: 150px; margin-top: 10px;">
-
-                            </div>
+                                <img v-if="
+                                BackgroundImage" :src="bodyBackgroundImage" alt="Background Image Preview" style="max-width: 100%; max-height: 150px; margin-top: 10px;">
+                            </div> 
+                            <div>
+                             <select
+                              class="form-select bagDark border-0 text-white formInput w-100 fs-12"
+                              aria-label="Default select example"
+                            >
+                              <option selected>-</option>
+                              <option value="Solid color" class="fs-12">
+                                Solid color
+                              </option>
+                              <option onselect="myFunction()" value="Radial gradient" class="fs-12">
+                                Radial gradient
+                              </option>
+                              <option value="Horizontal gradient" class="fs-12">
+                                Horizontal gradient
+                              </option>
+                              <option value="Vertical gradient" class="fs-12">
+                                Vertical gradient
+                              </option>
+                              <option value="Angle gradient" class="fs-12">
+                                Angle gradient
+                              </option>
+                            </select>
+                            <div class="d-flex">
+                              <input type="color"
+                                class="form-control form-control-color p-0 formInput bgWhite border-0 fs-12 mt-2 me-1"
+                                id="exampleColorInput" value="#ffffff" title="Choose your color" />
+                              <input type="color"
+                                class="form-control form-control-color p-0 formInput bgWhite border-0 fs-12 mt-2 ms-1"
+                                id="exampleColorInput" value="#ffffff" title="Choose your color" />
+                            </div></div>
                           </li>
                           <li class="p-2">
                             <p class="fs-12 mb-0 text-grey pb-2">Background Position</p>
@@ -481,7 +515,7 @@
                               <option value="Custom" class="fs-12">Custom</option>
                             </select>
                           </li>
-                          <li class="p-2">
+                          <!-- <li class="p-2">
                             <p class="fs-12 mb-0 text-grey pb-2">Background Default</p>
                             <select
                               class="form-select bagDark border-0 text-white formInput w-100 fs-12"
@@ -513,7 +547,7 @@
                                 class="form-control form-control-color p-0 formInput bgWhite border-0 fs-12 mt-2 ms-1"
                                 id="exampleColorInput" value="#ffffff" title="Choose your color" />
                             </div>
-                          </li>
+                          </li> -->
                         </ul>
                       </div>
                     </div>
@@ -1712,19 +1746,6 @@ otherBorderColor:'transparent' ,
 otherTextPrimary: 'transparent',
 otherTextSecondary: 'transparent',
 
-
-
-      ///// Buttons Secondary Properties
-      buttonSecFontColor: '#eee',
-      buttonSecFontColorHover: '#eee',
-      buttonSecFontOutline: '#eee',
-      buttonSecFontOutlineHover: '#eee',
-      buttonSecFontOutline: '#eee',
-      buttonSecBorderHover: '#eee',
-      ///// others Properties
-      otherBorderColor: 'transparent',
-      otherTextPrimary: 'transparent',
-      otherTextSecondary: 'transparent',
       fontList: [
         "ABeeZee",
         "Abel",
@@ -2609,7 +2630,6 @@ a:hover {
   --button-border-left: 0;
   --button-border-right: 0;
   --button-border-bottom: 0;
-
   --button-radius-top: 0;
   --button-radius-left: 0;
   --button-radius-right: 0;

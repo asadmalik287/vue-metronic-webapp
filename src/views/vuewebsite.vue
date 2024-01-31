@@ -517,10 +517,8 @@
                           </li>
                           <!-- <li class="p-2">
                             <p class="fs-12 mb-0 text-grey pb-2">Background Default</p>
-                            <select
-                              class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                              aria-label="Default select example"
-                            >
+                            <select class="form-select bagDark border-0 text-white formInput w-100 fs-12"
+                              aria-label="Default select example">
                               <option selected>-</option>
                               <option value="1" class="fs-12"></option>
                               <option value="Solid color" class="fs-12">
@@ -720,13 +718,13 @@
                         <li class="p-2 mt-1">
                           <p class="fs-12 pb-1 mb-0">Text Shadow</p>
                           <div class="d-flex align-items-center justify-content-between textShadowInput">
-                            <input v-model="h1TextShadow.left" @input="updateStyling" type="text" placeholder="-" value=""
+                            <input v-model="textH1Shadow.top" @input="updateStyling" type="text" placeholder="-" value=""
                               class="bagDark border-0 p-2 text-white fs-12" />
-                            <input v-model="h1TextShadow.right" @input="updateStyling" type="text" placeholder="-"
+                            <input v-model="textH1Shadow.right" @input="updateStyling" type="text" placeholder="-"
                               value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input v-model="h1TextShadow.blur" @input="updateStyling" type="text" placeholder="-" value=""
-                              class="bagDark border-0 p-2 text-white fs-12" />
-                            <input v-model="h1TextShadow.color" @input="updateStyling" type="color"
+                            <input v-model="textH1Shadow.bottom" @input="updateStyling" type="text" placeholder="-"
+                              value="" class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH1Shadow.color" @change="updateStyling" type="color"
                               class="form-control p-1 formColor form-control-color p-0 bgsecondary border-0 fs-12 text-white"
                               id="exampleColorInput" value="#eeeeee" title="Choose your color" />
                           </div>
@@ -1440,9 +1438,7 @@
                         <li class="p-2 mt-1">
                           <div class="d-flex align-items-center justify-content-between">
                             <p class="fs-12 mb-0">Border</p>
-                            <input v-model="buttonSecBorderColor"
-                                @input="updateStyling"
-                              type="color" 
+                            <input v-model="buttonSecBorderColor" @input="updateStyling" type="color"
                               class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12"
                               id="exampleColorInput" value="#91989f" title="Choose your color" />
                           </div>
@@ -1726,26 +1722,31 @@ export default {
         bottom: '0',
         left: '0',
       },
-   ///// Buttons Primary Properties
-   buttonPrimFontColor: '#eee',
-   buttonPrimFontColorHover: '#eee',
-   buttonPrimFontOutline : '#eee',
-   buttonPrimFontOutlineHover :'#eee',
-   buttonPrimBorderColor: '#eee',
-   buttonPrimBorderColorHover: '#eee',
+      textH1Shadow: {
+        top: '0',
+        right: '0',
+        bottom: '0',
+        color: '0',
+      },
+      ///// Buttons Primary Properties
+      buttonPrimFontColor: '#eee',
+      buttonPrimFontColorHover: '#eee',
+      buttonPrimFontOutline: '#eee',
+      buttonPrimFontOutlineHover: '#eee',
+      buttonPrimBorderColor: '#eee',
+      buttonPrimBorderColorHover: '#eee',
 
- ///// Buttons Secondary Properties
-   buttonSecFontColor: '#eee',
-   buttonSecFontColorHover: '#eee',
-   buttonSecFontOutline : '#eee',
-   buttonSecFontOutlineHover :'#eee',
-   buttonSecBorderColor: '#eee',
-   buttonSecBorderHover: '#eee',
-///// others Properties
-otherBorderColor:'transparent' ,
-otherTextPrimary: 'transparent',
-otherTextSecondary: 'transparent',
-
+      ///// Buttons Secondary Properties
+      buttonSecFontColor: '#eee',
+      buttonSecFontColorHover: '#eee',
+      buttonSecFontOutline: '#eee',
+      buttonSecFontOutlineHover: '#eee',
+      buttonSecBorderColor: '#eee',
+      buttonSecBorderHover: '#eee',
+      ///// others Properties
+      otherBorderColor: 'transparent',
+      otherTextPrimary: 'transparent',
+      otherTextSecondary: 'transparent',
       fontList: [
         "ABeeZee",
         "Abel",
@@ -1909,8 +1910,7 @@ otherTextSecondary: 'transparent',
         const reader = new FileReader();
         reader.onload = () => {
           this.bodyBackgroundImage = reader.result;
-      document.documentElement.style.setProperty("--body-background-image", `${reader.result}`);
-
+          document.documentElement.style.setProperty("--body-background-image", `${reader.result}`);
           this.updateStyling();
         };
         reader.readAsDataURL(file);
@@ -1951,6 +1951,14 @@ otherTextSecondary: 'transparent',
       document.documentElement.style.setProperty("--section-margin-right", `${right}px`);
       document.documentElement.style.setProperty("--section-margin-bottom", `${bottom}px`);
       document.documentElement.style.setProperty("--section-margin-left", `${left}px`);
+
+
+      // H1 Text Shadow
+      var { top, right, bottom, color } = this.textH1Shadow;
+      document.documentElement.style.setProperty("--text-shadow-top", `${top}px`);
+      document.documentElement.style.setProperty("--text-shadow-right", `${right}px`);
+      document.documentElement.style.setProperty("--text-shadow-bottom", `${bottom}px`);
+      document.documentElement.style.setProperty("--text-shadow-color", `${color}`);
       // Section Margin
 
       document.documentElement.style.setProperty(
@@ -2454,14 +2462,15 @@ otherTextSecondary: 'transparent',
   --bodyBackground: light;
   --bodybackgroundPosition: center;
   --bodybackgroundRepeat: repaet;
-  --body-background-image: none; /* Default body background image */
+  --body-background-image: none;
+  /* Default body background image */
 
   --bodybackgroundSize: Auto;
   --body-padding-top: 0,
     --body-padding-right:0,
     --body-padding-bottom:0,
     --body-padding-left:0,
-    
+
 }
 
 .bodySection {
@@ -2507,7 +2516,7 @@ section {
   --text-shadow-top: 0;
   --text-shadow-right: 0;
   --text-shadow-bottom: 0;
-  --text-shadow-left: 0;
+  --text-shadow-color: 0;
 }
 
 h1 {
@@ -2519,7 +2528,7 @@ h1 {
   text-transform: var(--h1TextTransform);
   text-decoration: var(--h1TextDeoration);
   letter-spacing: var(--h1LetterSpacing);
-  text-shadow: var(--h1textShadow);
+  text-shadow: var(--text-shadow-top) var(--text-shadow-right) var(--text-shadow-bottom) var(--text-shadow-color);
   color: var(--h1fontColor);
 }
 

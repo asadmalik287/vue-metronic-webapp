@@ -405,7 +405,8 @@
                             <div class="d-flex align-items-center justify-content-between">
                               <p class="fs-12 mb-0 text-grey">Font Color</p>
                               <input type="color" v-model="bodyFontColor" @input="updateStyling"
-                                class="form-control form-control-color p-0 formInput bgsecondary border-0 fs-12"
+                                class="form-control form-control-color p-0 formInput border-0 fs-12"
+                                style='border-radius:0px !important;'
                                 value="#555555" title="Choose your color" />
                             </div>
                           </li>
@@ -457,7 +458,7 @@
                               <option value="Solid color" class="fs-12">
                                 Solid color
                               </option>
-                              <option onselect="myFunction()" value="Radial gradient" class="fs-12">
+                              <option value="Radial gradient" class="fs-12">
                                 Radial gradient
                               </option>
                               <option value="Horizontal gradient" class="fs-12">
@@ -1447,7 +1448,7 @@
                         <li class="p-2 mt-1">
                           <div class="d-flex align-items-center justify-content-between">
                             <p class="fs-12 mb-0">Border</p>
-                            <input v-model="buttonSecBorderColor" @input="updateStyling" type="color"
+                            <input v-model="buttonSecBorder" @input="updateStyling" type="color"
                               class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12"
                               id="exampleColorInput" value="#91989f" title="Choose your color" />
                           </div>
@@ -1768,7 +1769,7 @@ export default {
       buttonSecFontColorHover: '#eee',
       buttonSecFontOutline: '#eee',
       buttonSecFontOutlineHover: '#eee',
-      buttonSecBorderColor: '#eee',
+      buttonSecBorder: '#eee',
       buttonSecBorderHover: '#eee',
       ///// others Properties
       otherBorderColor: 'transparent',
@@ -2248,18 +2249,18 @@ export default {
         "--buttonSecondaryBorderhover",
         `${this.buttonsecBorderColorHover}`
       );
-      /////// Buttons Secondary Properties
+      /////// others Properties
       document.documentElement.style.setProperty(
         "--otherBordercolor",
-        `${this.buttonsecFontOutlineHover}`
+        `${this.otherBorderColor}`
       );
       document.documentElement.style.setProperty(
         "--otherTextPrimary",
-        `${this.buttonsecFontOutlineHover}`
+        `${this.otherTextPrimary}`
       );
       document.documentElement.style.setProperty(
         "--otherTextSecondary",
-        `${this.buttonsecBorderColor}`
+        `${this.otherTextSecondary}`
       );
 
     },
@@ -2517,10 +2518,10 @@ export default {
   /* Default body background image */
 
   --bodybackgroundSize: Auto;
-  --body-padding-top: 0,
-    --body-padding-right:0,
-    --body-padding-bottom:0,
-    --body-padding-left:0,
+  --body-padding-top: 0;
+  --body-padding-right:0;
+  --body-padding-bottom:0;
+  --body-padding-left:0;
 
 }
 
@@ -2541,10 +2542,10 @@ export default {
 :root {
   --sectionBackgroundColor: #fff;
   --sectionBackgroundPosition: vertical;
-  --section-margin-top: 0,
-    --section-margin-right:0,
-    --section-margin-bottom:0,
-    --section-margin-left:0,
+  --section-margin-top: 0;
+    --section-margin-right:0;
+    --section-margin-bottom:0;
+    --section-margin-left:0;
 }
 
 section {
@@ -2570,7 +2571,7 @@ section {
   --text-shadow-color: 0;
 }
 
-h1 {
+.bodySection h1 {
   font-family: var(--h1fontFamily);
   font-size: var(--h1fontSize);
   line-height: var(--h1fontHeight);
@@ -2600,7 +2601,7 @@ h1 {
   --texth2-shadow-color: 0;
 }
 
-h2 {
+.bodySection h2 {
   font-family: var(--h2fontFamily);
   font-size: var(--h2fontSize);
   line-height: var(--h2fontHeight);
@@ -2630,7 +2631,7 @@ h2 {
   --texth3-shadow-color: 0;
 }
 
-h3 {
+.bodySection h3 {
   font-family: var(--h3fontFamily);
   font-size: var(--h3fontSize);
   line-height: var(--h3fontHeight);
@@ -2660,7 +2661,7 @@ h3 {
   --texth4-shadow-color: 0;
 }
 
-h4 {
+.bodySection h4 {
   font-family: var(--h4fontFamily);
   font-size: var(--h4fontSize);
   line-height: var(--h4fontHeight);
@@ -2680,12 +2681,12 @@ h4 {
   --linkHoverTextDecoration: normal;
 }
 
-a {
+.bodySection a {
   color: var(--linkColor);
   text-decoration: var(--linkTextDecoration);
 }
 
-a:hover {
+.bodySection a:hover {
   color: var(--linkHoverColor);
   text-decoration: var(--linkHoverTextDecoration);
 }
@@ -2708,7 +2709,7 @@ a:hover {
   --button-radius-bottom: 0;
 }
 
-button {
+.bodySection button {
   font-family: var(--buttonFontFamily);
   font-size: var(--buttonFontSize);
   font-weight: var(--buttonFontWeight);
@@ -2728,13 +2729,13 @@ button {
   --buttonPrimaryBorderhover: white;
 }
 
-button.btn-primary {
+.bodySection .btn-primary {
   color: var(--buttonPrimarycolor);
   outline-color: var(--buttonPrimaryOutline);
   border-color: var(--buttonPrimaryBorder);
 }
 
-button.btn-primary:hover {
+..bodySection .btn-primary:hover {
   color: var(--buttonPrimarycolorhover);
   outline-color: var(--buttonPrimaryOutlinehover);
   border-color: var(--buttonPrimaryBorderhover);
@@ -2749,13 +2750,13 @@ button.btn-primary:hover {
   --buttonSecondaryBorderhover: white;
 }
 
-button.btn-Secondary {
+.bodySection n.btn-Secondary {
   color: var(--buttonSecondarycolor);
   outline-color: var(--buttonSecondaryOutline);
   border-color: var(--buttonSecondaryBorder);
 }
 
-button.btn-Secondary:hover {
+.bodySection .btn-Secondary:hover {
   color: var(--buttonSecondarycolorhover);
   outline-color: var(--buttonSecondaryOutlinehover);
   border-color: var(--buttonSecondaryBorderhover);
@@ -2768,17 +2769,17 @@ button.btn-Secondary:hover {
   --otherTextSecondary: grey;
 }
 
-div,
-p,
-span {
+.bodySection div,
+.bodySection p,
+.bodySection span {
   border-color: var(--otherBordercolor);
 }
 
-.text-primary {
+.bodySection .text-primary {
   color: var(--otherTextPrimary)
 }
 
-.text-secondary {
+.bodySection .text-secondary {
   color: var(--otherTextSecondary)
 }
 </style>

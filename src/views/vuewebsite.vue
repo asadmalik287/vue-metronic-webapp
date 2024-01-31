@@ -853,10 +853,13 @@
                         <li class="p-2 mt-1">
                           <p class="fs-12 pb-1 mb-0">Text Shadow</p>
                           <div class="d-flex align-items-center justify-content-between textShadowInput">
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="color"
+                            <input v-model="textH2Shadow.top" @input="updateStyling" type="text" placeholder="-" value=""
+                              class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH2Shadow.right" @input="updateStyling" type="text" placeholder="-"
+                              value="" class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH2Shadow.bottom" @input="updateStyling" type="text" placeholder="-"
+                              value="" class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH2Shadow.color" @change="updateStyling" type="color"
                               class="form-control p-1 formColor form-control-color p-0 bgsecondary border-0 fs-12 text-white"
                               id="exampleColorInput" value="#eeeeee" title="Choose your color" />
                           </div>
@@ -986,11 +989,14 @@
                         </li>
                         <li class="p-2 mt-1">
                           <p class="fs-12 pb-1 mb-0">Text Shadow</p>
-                          <div class="d-flex align-items-center justify-content-between textShadowInput">
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="color"
+                           <div class="d-flex align-items-center justify-content-between textShadowInput">
+                            <input v-model="textH3Shadow.top" @input="updateStyling" type="text" placeholder="-" value=""
+                              class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH3Shadow.right" @input="updateStyling" type="text" placeholder="-"
+                              value="" class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH3Shadow.bottom" @input="updateStyling" type="text" placeholder="-"
+                              value="" class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH3Shadow.color" @change="updateStyling" type="color"
                               class="form-control p-1 formColor form-control-color p-0 bgsecondary border-0 fs-12 text-white"
                               id="exampleColorInput" value="#eeeeee" title="Choose your color" />
                           </div>
@@ -1118,11 +1124,14 @@
                         </li>
                         <li class="p-2 mt-1">
                           <p class="fs-12 pb-1 mb-0">Text Shadow</p>
-                          <div class="d-flex align-items-center justify-content-between textShadowInput">
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="text" placeholder="-" value="" class="bagDark border-0 p-2 text-white fs-12" />
-                            <input type="color"
+                           <div class="d-flex align-items-center justify-content-between textShadowInput">
+                            <input v-model="textH4Shadow.top" @input="updateStyling" type="text" placeholder="-" value=""
+                              class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH4Shadow.right" @input="updateStyling" type="text" placeholder="-"
+                              value="" class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH4Shadow.bottom" @input="updateStyling" type="text" placeholder="-"
+                              value="" class="bagDark border-0 p-2 text-white fs-12" />
+                            <input v-model="textH4Shadow.color" @change="updateStyling" type="color"
                               class="form-control p-1 formColor form-control-color p-0 bgsecondary border-0 fs-12 text-white"
                               id="exampleColorInput" value="#eeeeee" title="Choose your color" />
                           </div>
@@ -1944,7 +1953,6 @@ export default {
       document.documentElement.style.setProperty("--body-padding-right", `${right}px`);
       document.documentElement.style.setProperty("--body-padding-bottom", `${bottom}px`);
       document.documentElement.style.setProperty("--body-padding-left", `${left}px`);
-      // Body Padding
       // Section Margin
       var { top, right, bottom, left } = this.sectionMargin;
       document.documentElement.style.setProperty("--section-margin-top", `${top}px`);
@@ -1953,13 +1961,6 @@ export default {
       document.documentElement.style.setProperty("--section-margin-left", `${left}px`);
 
 
-      // H1 Text Shadow
-      var { top, right, bottom, color } = this.textH1Shadow;
-      document.documentElement.style.setProperty("--text-shadow-top", `${top}px`);
-      document.documentElement.style.setProperty("--text-shadow-right", `${right}px`);
-      document.documentElement.style.setProperty("--text-shadow-bottom", `${bottom}px`);
-      document.documentElement.style.setProperty("--text-shadow-color", `${color}`);
-      // Section Margin
 
       document.documentElement.style.setProperty(
         "--sectionBackgroundColor",
@@ -1998,6 +1999,13 @@ export default {
         "--h1TextDeoration",
         `${this.h1TextDecoration}`
       );
+       // H2 Text Shadow
+      var { top, right, bottom, color } = this.textH2Shadow;
+      document.documentElement.style.setProperty("--texth2-shadow-top", `${top}px`);
+      document.documentElement.style.setProperty("--texth2-shadow-right", `${right}px`);
+      document.documentElement.style.setProperty("--texth2-shadow-bottom", `${bottom}px`);
+      document.documentElement.style.setProperty("--texth2-shadow-color", `${color}`);
+
       /////// h2 Properties
       document.documentElement.style.setProperty(
         "--h2fontSize", `
@@ -2031,6 +2039,12 @@ export default {
         "--h2TextDeoration",
         `${this.h2TextDecoration}`
       );
+      // H1 Text Shadow
+      var { top, right, bottom, color } = this.textH1Shadow;
+      document.documentElement.style.setProperty("--text-shadow-top", `${top}px`);
+      document.documentElement.style.setProperty("--text-shadow-right", `${right}px`);
+      document.documentElement.style.setProperty("--text-shadow-bottom", `${bottom}px`);
+      document.documentElement.style.setProperty("--text-shadow-color", `${color}`);
       /////// h3 Properties
       document.documentElement.style.setProperty(
         "--h3fontSize", `
@@ -2064,6 +2078,13 @@ export default {
         "--h3TextDeoration",
         `${this.h3TextDecoration}`
       );
+             // H3 Text Shadow
+      var { top, right, bottom, color } = this.textH3Shadow;
+      document.documentElement.style.setProperty("--texth3-shadow-top", `${top}px`);
+      document.documentElement.style.setProperty("--texth3-shadow-right", `${right}px`);
+      document.documentElement.style.setProperty("--texth3-shadow-bottom", `${bottom}px`);
+      document.documentElement.style.setProperty("--texth3-shadow-color", `${color}`);
+ 
       /////// h4 Properties
       document.documentElement.style.setProperty(
         "--h4fontSize", `
@@ -2097,6 +2118,18 @@ export default {
         "--h4TextDeoration",
         `${this.h4TextDecoration}`
       );
+            // H4 Text Shadow
+      var { top, right, bottom, color } = this.textH3Shadow;
+      document.documentElement.style.setProperty("--texth4-shadow-top", `${top}px`);
+      document.documentElement.style.setProperty("--texth4-shadow-right", `${right}px`);
+      document.documentElement.style.setProperty("--texth4-shadow-bottom", `${bottom}px`);
+      document.documentElement.style.setProperty("--texth4-shadow-color", `${color}`);
+      //  Buttons
+       var { top, right, bottom, left } = this.buttonRadius;
+      document.documentElement.style.setProperty("--button-Radius-top", `${top}px`);
+      document.documentElement.style.setProperty("--button-Radius-right", `${right}px`);
+      document.documentElement.style.setProperty("--button-Radius-bottom", `${bottom}px`);
+      document.documentElement.style.setProperty("--button-Radius-left", `${left}px`);
       /////// Links Properties
       document.documentElement.style.setProperty(
         "--linkColor",
@@ -2543,6 +2576,10 @@ h1 {
   --h2TextDeoration: inherit;
   --h2TextTransform: Inherit;
   --h2textShadow: none;
+  --texth2-shadow-top: 0;
+  --texth2-shadow-right: 0;
+  --texth2-shadow-bottom: 0;
+  --texth2-shadow-color: 0;
 }
 
 h2 {
@@ -2554,7 +2591,7 @@ h2 {
   text-transform: var(--h2TextTransform);
   text-decoration: var(--h2TextDeoration);
   letter-spacing: var(--h2LetterSpacing);
-  text-shadow: var(--h2textShadow);
+  text-shadow: var(--texth2-shadow-top) var(--texth2-shadow-right) var(--texth2-shadow-bottom) var(--texth2-shadow-color);
   color: var(--h2fontColor);
 }
 
@@ -2569,6 +2606,10 @@ h2 {
   --h3TextDeoration: inherit;
   --h3TextTransform: Inherit;
   --h3textShadow: none;
+  --texth3-shadow-top: 0;
+  --texth3-shadow-right: 0;
+  --texth3-shadow-bottom: 0;
+  --texth3-shadow-color: 0;
 }
 
 h3 {
@@ -2580,7 +2621,7 @@ h3 {
   text-transform: var(--h3TextTransform);
   text-decoration: var(--h3TextDeoration);
   letter-spacing: var(--h3LetterSpacing);
-  text-shadow: var(--h3textShadow);
+  text-shadow: var(--texth3-shadow-top) var(--texth3-shadow-right) var(--texth3-shadow-bottom) var(--texth3-shadow-color);
   color: var(--h3fontColor);
 }
 
@@ -2595,6 +2636,10 @@ h3 {
   --h4TextDeoration: inherit;
   --h4TextTransform: Inherit;
   --h4textShadow: none;
+  --texth4-shadow-top: 0;
+  --texth4-shadow-right: 0;
+  --texth4-shadow-bottom: 0;
+  --texth4-shadow-color: 0;
 }
 
 h4 {
@@ -2606,7 +2651,7 @@ h4 {
   text-transform: var(--h4TextTransform);
   text-decoration: var(--h4TextDeoration);
   letter-spacing: var(--h4LetterSpacing);
-  text-shadow: var(--h4textShadow);
+  text-shadow: var(--texth4-shadow-top) var(--texth4-shadow-right) var(--texth4-shadow-bottom) var(--texth4-shadow-color);
   color: var(--h4fontColor);
 }
 

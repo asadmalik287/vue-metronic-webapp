@@ -877,7 +877,7 @@
                             </select>
                           </li>
                           <li class="p-2">
-                            <p class="fs-12 mb-0 text-grey pb-2">Background Size</p>
+                            <p class="fs-12 mb-0 text-grey pb-2">Background Default</p>
                             <select
                               class="form-select bagDark border-0 text-white formInput w-100 fs-12"
                               aria-label="Default select example"
@@ -2327,7 +2327,7 @@
                         <li class="p-2 mt-1">
                           <div class="d-flex align-items-center justify-content-between">
                             <p class="fs-12 mb-0">Border</p>
-                            <input v-model="buttonSecBorder"
+                            <input v-model="buttonSecBorderColor"
                                 @input="updateStyling"
                               type="color" 
                               class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12"
@@ -2414,19 +2414,6 @@
                           <div class="d-flex align-items-center justify-content-between">
                             <p class="fs-12 mb-0">Border color</p>
                             <input v-model="otherBorderColor"
-                                @input="updateStyling"
-                              type="color"
-                              class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12"
-                              id="exampleColorInput"
-                              value="#91989f"
-                              title="Choose your color"
-                            />
-                          </div>
-                        </li>
-                        <li class="p-2 mt-1">
-                          <div class="d-flex align-items-center justify-content-between">
-                            <p class="fs-12 mb-0">Border-x2 color</p>
-                            <input v-model="otherBorder2xColor"
                                 @input="updateStyling"
                               type="color"
                               class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12"
@@ -2723,7 +2710,7 @@ export default {
    buttonSecFontColorHover: '#eee',
    buttonSecFontOutline : '#eee',
    buttonSecFontOutlineHover :'#eee',
-   buttonSecFontOutline: '#eee',
+   buttonSecBorderColor: '#eee',
    buttonSecBorderHover: '#eee',
 ///// others Properties
 otherBorderColor:'transparent' ,
@@ -3174,10 +3161,7 @@ otherTextSecondary: 'transparent',
         "--otherTextSecondary",
         `${this.buttonsecBorderColor}`
       );
-      // document.documentElement.style.setProperty(
-      //   "--buttonSecondaryBorderhover",
-      //   `${this.buttonsecBorderColorHover}`
-      // );
+
     },
 
     handleDragStart(event) {
@@ -3665,7 +3649,7 @@ button.btn-Secondary:hover {
 :root {
   --otherBordercolor: black;
   --otherBorder2xcolor: black;
-  --otherTextPrimary: blue;
+  --otherTextPrimary: #af9f8c;
   --otherTextSecondary: grey;
 }
 div , p , span{

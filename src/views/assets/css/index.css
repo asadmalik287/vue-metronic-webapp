@@ -271,7 +271,7 @@ body {
 }
 @font-face {
   font-family: FjallaOne;
-  src: url("./fonts/Fjalla_One/FjallaOne-Regular.ttf");
+  src: url("");
 }
 .FjallaOne{
   font-family: FjallaOne;

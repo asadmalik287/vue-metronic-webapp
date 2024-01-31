@@ -449,36 +449,7 @@
                                 <img v-if="
                                 BackgroundImage" :src="bodyBackgroundImage" alt="Background Image Preview" style="max-width: 100%; max-height: 150px; margin-top: 10px;">
                             </div> 
-                            <div>
-                             <select
-                              class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                              aria-label="Default select example"
-                            >
-                              <option selected>-</option>
-                              <option value="Solid color" class="fs-12">
-                                Solid color
-                              </option>
-                              <option value="Radial gradient" class="fs-12">
-                                Radial gradient
-                              </option>
-                              <option value="Horizontal gradient" class="fs-12">
-                                Horizontal gradient
-                              </option>
-                              <option value="Vertical gradient" class="fs-12">
-                                Vertical gradient
-                              </option>
-                              <option value="Angle gradient" class="fs-12">
-                                Angle gradient
-                              </option>
-                            </select>
-                            <div class="d-flex">
-                              <input type="color"
-                                class="form-control form-control-color p-0 formInput bgWhite border-0 fs-12 mt-2 me-1"
-                                id="exampleColorInput" value="#ffffff" title="Choose your color" />
-                              <input type="color"
-                                class="form-control form-control-color p-0 formInput bgWhite border-0 fs-12 mt-2 ms-1"
-                                id="exampleColorInput" value="#ffffff" title="Choose your color" />
-                            </div></div>
+                           
                           </li>
                           <li class="p-2">
                             <p class="fs-12 mb-0 text-grey pb-2">Background Position</p>
@@ -580,21 +551,7 @@
                               id="exampleColorInput" value="#af9f8c" title="Choose your color" />
                           </div>
                         </li>
-                        <li class="p-2 mt-1">
-                          <p class="fs-12 mb-0 text-grey pb-2">Default Background</p>
-                          <select class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                            aria-label="Default select example">
-                            <option selected>-</option>
-                            <option value="1" class="fs-12">Solid color</option>
-                            <option value="2" class="fs-12">Radial gradient</option>
-                            <option value="3" class="fs-12">Horizontal gradient</option>
-                            <option value="3" class="fs-12">Vertical gradient</option>
-                            <option value="3" class="fs-12">Angle gradient</option>
-                          </select>
-                          <input type="color"
-                            class="form-control form-control-color p-0 formInput bg-white border-0 fs-12 mt-2"
-                            id="exampleColorInput" value="#ffffff" title="Choose your color" />
-                        </li>
+
                       </ul>
                     </div>
                     <div class="tab-pane fade text-white p-2" id="v-pills-messages2" role="tabpanel"
@@ -1371,38 +1328,6 @@
                               id="exampleColorInput" value="#998b7a" title="Choose your color" />
                           </div>
                         </li>
-                        <li class="p-2">
-                          <p class="fs-12 mb-0 text-grey pb-2">Background</p>
-                          <select class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                            aria-label="Default select example">
-                            <option selected>-</option>
-                            <option value="1" class="fs-12"></option>
-                            <option value="Solid" class="fs-12">Solid color</option>
-                            <option value="Radial" class="fs-12">Radial gradient</option>
-                            <option value="Horizontal" class="fs-12">Horizontal gradient</option>
-                            <option value="Vertical" class="fs-12">Vertical gradient</option>
-                            <option value="angle-gradient" class="fs-12">Angle gradient</option>
-                          </select>
-                          <input type="color"
-                            class="form-control form-control-color p-0 formInput lightolor border-0 fs-12 mt-2"
-                            id="exampleColorInput" value="#998b7a" title="Choose your color" />
-                        </li>
-                        <li class="p-2">
-                          <p class="fs-12 mb-0 text-grey pb-2">Background:Hover</p>
-                          <select class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                            aria-label="Default select example">
-                            <option selected>-</option>
-                            <option value="1" class="fs-12"></option>
-                            <option value="Solid" class="fs-12">Solid color</option>
-                            <option value="Radial" class="fs-12">Radial gradient</option>
-                            <option value="Horizontal" class="fs-12">Horizontal gradient</option>
-                            <option value="Vertical" class="fs-12">Vertical gradient</option>
-                            <option value="angle-gradient" class="fs-12">Angle gradient</option>
-                          </select>
-                          <input type="color"
-                            class="form-control form-control-color p-0 formInput lightolor border-0 fs-12 mt-2"
-                            id="exampleColorInput" value="#998b7a" title="Choose your color" />
-                        </li>
                       </ul>
                     </div>
                     <div class="tab-pane fade text-white" id="v-pills-Buttonsecondary" role="tabpanel"
@@ -1410,7 +1335,7 @@
                       <ul class="p-2 mb-1 list-unstyled">
                         <li data-group="navigations" class="active bold p-2 d-flex justify-content-between mt-1">
                           <h4 class="text-grey ry activaNavigate mb-0">
-                            Buttons Primary
+                            Buttons Secondary
                           </h4>
                         </li>
                         <li class="p-2 mt-1">
@@ -1461,38 +1386,7 @@
                               id="exampleColorInput" value="#91989f" title="Choose your color" />
                           </div>
                         </li>
-                        <li class="p-2">
-                          <p class="fs-12 mb-0 text-grey pb-2">Background</p>
-                          <select class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                            aria-label="Default select example">
-                            <option selected>-</option>
-                            <option value="1" class="fs-12"></option>
-                            <option value="Solid" class="fs-12">Solid color</option>
-                            <option value="Radial" class="fs-12">Radial gradient</option>
-                            <option value="Horizontal" class="fs-12">Horizontal gradient</option>
-                            <option value="Vertical" class="fs-12">Vertical gradient</option>
-                            <option value="angle-gradient" class="fs-12">Angle gradient</option>
-                          </select>
-                          <input type="color"
-                            class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12 mt-2"
-                            id="exampleColorInput" value="#91989f" title="Choose your color" />
-                        </li>
-                        <li class="p-2">
-                          <p class="fs-12 mb-0 text-grey pb-2">Background:Hover</p>
-                          <select class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                            aria-label="Default select example">
-                            <option selected>-</option>
-                            <option value="1" class="fs-12"></option>
-                            <option value="Solid color" class="fs-12">Solid color</option>
-                            <option value="Radial gradient" class="fs-12">Radial gradient</option>
-                            <option value="3" class="fs-12">Horizontal gradient</option>
-                            <option value="3" class="fs-12">Vertical gradient</option>
-                            <option value="3" class="fs-12">Angle gradient</option>
-                          </select>
-                          <input type="color"
-                            class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12 mt-2"
-                            id="exampleColorInput" value="#91989f" title="Choose your color" />
-                        </li>
+
                       </ul>
                     </div>
 
@@ -1979,8 +1873,6 @@ export default {
       document.documentElement.style.setProperty("--section-margin-bottom", `${bottom}px`);
       document.documentElement.style.setProperty("--section-margin-left", `${left}px`);
 
-
-
       document.documentElement.style.setProperty(
         "--sectionBackgroundColor",
         `${this.sectionBackgroundColor}`
@@ -2227,27 +2119,27 @@ export default {
       /////// Buttons Secondary Properties
       document.documentElement.style.setProperty(
         "--buttonSecondarycolor",
-        `${this.buttonsecFontColor}`
+        `${this.buttonSecFontColor}`
       );
       document.documentElement.style.setProperty(
         "--buttonSecondarycolorhover",
-        `${this.buttonsecFontColorHover}`
+        `${this.buttonSecFontColorHover}`
       );
       document.documentElement.style.setProperty(
         "--buttonSecondaryOutline",
-        `${this.buttonsecFontOutline}`
+        `${this.buttonSecFontOutline}`
       );
       document.documentElement.style.setProperty(
         "--buttonSecondaryOutlinehover",
-        `${this.buttonsecFontOutlineHover}`
+        `${this.buttonSecFontOutlineHover}`
       );
       document.documentElement.style.setProperty(
         "--buttonSecondaryBorder",
-        `${this.buttonsecBorderColor}`
+        `${this.buttonSecBorder}`
       );
       document.documentElement.style.setProperty(
         "--buttonSecondaryBorderhover",
-        `${this.buttonsecBorderColorHover}`
+        `${this.buttonSecBorderHover}`
       );
       /////// others Properties
       document.documentElement.style.setProperty(
@@ -2262,9 +2154,7 @@ export default {
         "--otherTextSecondary",
         `${this.otherTextSecondary}`
       );
-
     },
-
     handleDragStart(event) {
       this.draggedComponent = event.target.dataset.type;
     },
@@ -2273,7 +2163,6 @@ export default {
     },
     selectFont(font) {
       this.selectedFontFamily = font;
-
       this.isDropdownOpen = false;
     },
     handleDragOver(event) {
@@ -2281,10 +2170,8 @@ export default {
     },
     handleDrop(event) {
       event.preventDefault();
-
       if (this.draggedComponent) {
         const mouseY = event.clientY;
-
         let newComponent;
         // Inside the handleDrop method
         switch (this.draggedComponent) {

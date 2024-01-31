@@ -472,9 +472,11 @@
                             </select>
                           </li>
                           <li class="p-2">
-                            <p class="fs-12 mb-0 text-grey pb-2">Background Size</p>
-                            <select class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                              aria-label="Default select example">
+                            <p class="fs-12 mb-0 text-grey pb-2">Background Default</p>
+                            <select
+                              class="form-select bagDark border-0 text-white formInput w-100 fs-12"
+                              aria-label="Default select example"
+                            >
                               <option selected>-</option>
                               <option value="1" class="fs-12"></option>
                               <option value="Solid color" class="fs-12">
@@ -1394,7 +1396,9 @@
                         <li class="p-2 mt-1">
                           <div class="d-flex align-items-center justify-content-between">
                             <p class="fs-12 mb-0">Border</p>
-                            <input v-model="buttonSecBorder" @input="updateStyling" type="color"
+                            <input v-model="buttonSecBorderColor"
+                                @input="updateStyling"
+                              type="color" 
                               class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12"
                               id="exampleColorInput" value="#91989f" title="Choose your color" />
                           </div>
@@ -1452,14 +1456,6 @@
                           <div class="d-flex align-items-center justify-content-between">
                             <p class="fs-12 mb-0">Border color</p>
                             <input v-model="otherBorderColor" @input="updateStyling" type="color"
-                              class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12"
-                              id="exampleColorInput" value="#91989f" title="Choose your color" />
-                          </div>
-                        </li>
-                        <li class="p-2 mt-1">
-                          <div class="d-flex align-items-center justify-content-between">
-                            <p class="fs-12 mb-0">Border-x2 color</p>
-                            <input v-model="otherBorder2xColor" @input="updateStyling" type="color"
                               class="form-control form-control-color p-0 formInput lightbluecolor border-0 fs-12"
                               id="exampleColorInput" value="#91989f" title="Choose your color" />
                           </div>
@@ -1686,13 +1682,27 @@ export default {
         bottom: '0',
         left: '0',
       },
-      ///// Buttons Primary Properties
-      buttonPrimFontColor: '#eee',
-      buttonPrimFontColorHover: '#eee',
-      buttonPrimFontOutline: '#eee',
-      buttonPrimFontOutlineHover: '#eee',
-      buttonPrimBorderColor: '#eee',
-      buttonPrimBorderColorHover: '#eee',
+   ///// Buttons Primary Properties
+   buttonPrimFontColor: '#eee',
+   buttonPrimFontColorHover: '#eee',
+   buttonPrimFontOutline : '#eee',
+   buttonPrimFontOutlineHover :'#eee',
+   buttonPrimBorderColor: '#eee',
+   buttonPrimBorderColorHover: '#eee',
+
+ ///// Buttons Secondary Properties
+   buttonSecFontColor: '#eee',
+   buttonSecFontColorHover: '#eee',
+   buttonSecFontOutline : '#eee',
+   buttonSecFontOutlineHover :'#eee',
+   buttonSecBorderColor: '#eee',
+   buttonSecBorderHover: '#eee',
+///// others Properties
+otherBorderColor:'transparent' ,
+otherTextPrimary: 'transparent',
+otherTextSecondary: 'transparent',
+
+
 
       ///// Buttons Secondary Properties
       buttonSecFontColor: '#eee',

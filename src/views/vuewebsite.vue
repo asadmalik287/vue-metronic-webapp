@@ -426,7 +426,17 @@
                             </div>
                           </li>
                           <li class="p-2">
-                            <p class="fs-12 mb-0 text-grey">Background Image</p>
+                            <p class="fs-12 mb-0 text-grey">Background</p>
+                             <select
+                              class="form-select bagDark border-0 text-white formInput w-100 fs-12"
+                              aria-label="Default select example">
+                              <option selected disabled>-</option>
+                              <option value="Top" class="fs-12">Background Color</option>
+                              <option value="Bottom" class="fs-12">Background Image</option>
+                            </select>
+                             <input type="color"
+                                class="w-100 mb-3 form-control form-control-color p-0 formInput bgsecondary border-0 fs-12"
+                                value="#555555" title="Choose your color" />
                             <div class="backgroundImage"></div>
                             <div class="mt-3">
                               <input class="form-control bagDark formInput w-100 border-0 fs-12 text-white"

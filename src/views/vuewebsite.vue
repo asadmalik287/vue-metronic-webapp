@@ -2888,6 +2888,7 @@ otherTextSecondary: 'transparent',
       document.documentElement.style.setProperty(
         "--bodyfontSize",
         `${this.bodyFontSize}px`
+
       );
       document.documentElement.style.setProperty(
         "--bodybackgroundPosition",

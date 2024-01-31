@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat&family=Poppins&family=Rubik:wght@300;400&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -309,7 +311,6 @@ body {
     background-color: rgba(68, 68, 68, 0.6);
     cursor: grabbing;
   }
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat&family=Poppins&family=Rubik:wght@300;400&display=swap');
 .maintabs{
   width: 50px;
   height: 100vh;

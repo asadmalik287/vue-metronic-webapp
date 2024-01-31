@@ -2160,10 +2160,7 @@ export default {
         "--otherTextSecondary",
         `${this.buttonsecBorderColor}`
       );
-      // document.documentElement.style.setProperty(
-      //   "--buttonSecondaryBorderhover",
-      //   `${this.buttonsecBorderColorHover}`
-      // );
+
     },
 
     handleDragStart(event) {
@@ -2654,7 +2651,7 @@ button.btn-Secondary:hover {
 :root {
   --otherBordercolor: black;
   --otherBorder2xcolor: black;
-  --otherTextPrimary: blue;
+  --otherTextPrimary: #af9f8c;
   --otherTextSecondary: grey;
 }
 

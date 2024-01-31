@@ -434,7 +434,6 @@
                               <option selected disabled>-</option>
                               <option value="Background-color" class="fs-12">Background Color</option>
                               <option value="Background-image" class="fs-12">Background Image</option>
-                              <option value="Background-gradient" class="fs-12">Background Gradient</option>
                             </select>
                              <!-- Background Color -->
                              <input type="color"

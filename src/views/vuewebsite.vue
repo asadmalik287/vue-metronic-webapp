@@ -373,7 +373,7 @@
                           <li class="p-2">
                             <p class="mb-0 fs-12 text-grey pb-1">font family</p>
                             <div class="dropdown">
-                              <button type="button "
+                              <button type="button" 
                                 class="btn p-2 border-0 dropdown-toggle text-white fs-12 d-flex justify-content-between w-100 align-items-center bagDark dropdownBtn"
                                 data-bs-toggle="dropdown" @click="toggleDropdown">
                                 {{ selectedFontFamily }}
@@ -1530,6 +1530,7 @@ export default {
         bottom: 0,
         left: 0,
       },
+      bodyFontFamily: 'open sans',
       ////// Sections Properties
       sectionMargin: {
         top: 0,
@@ -1818,6 +1819,10 @@ export default {
       }
     },
     updateStyling() {
+      document.documentElement.style.setProperty(
+        "--bodyfontFamily",
+        `${this.bodyFontFamily}`
+      );
       document.documentElement.style.setProperty(
         "--bodyfontHeight",
         `${this.bodyLineHeight}px`

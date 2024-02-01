@@ -373,15 +373,15 @@
                           <li class="p-2">
                             <p class="mb-0 fs-12 text-grey pb-1">font family</p>
                             <div class="dropdown">
-                              <button type="button" 
+                              <button type="button"
                                 class="btn p-2 border-0 dropdown-toggle text-white fs-12 d-flex justify-content-between w-100 align-items-center bagDark dropdownBtn"
                                 data-bs-toggle="dropdown" @click="toggleDropdown">
                                 {{ selectedFontFamily }}
                               </button>
                               <ul style="{ display: isDropdownOpen ? 'block' : 'none' }" class="dropdown-menu fontmenu">
                                 <li v-for="(font, index) in fontList" :key="index">
-                                  <a class="dropdown-item" @click="selectFont(font)" 
-                                    :style="{ fontFamily: `${font}` }">{{ font }}</a>
+                                  <a class="dropdown-item" @click="selectFont(font)" :style="{ fontFamily: `${font}` }">{{
+                                    font }}</a>
                                 </li>
                               </ul>
                             </div>

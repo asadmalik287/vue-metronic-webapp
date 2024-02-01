@@ -380,8 +380,8 @@
                               </button>
                               <ul style="{ display: isDropdownOpen ? 'block' : 'none' }" class="dropdown-menu fontmenu">
                                 <li v-for="(font, index) in fontList" :key="index">
-                                  <a class="dropdown-item" @click="selectFont(font)" fontfamily="ABeeZee"
-                                    :style="{ fontFamily: 'A Bee Zee' }">{{ font }}</a>
+                                  <a class="dropdown-item" @click="selectFont(font)" 
+                                    :style="{ fontFamily: `${font}` }">{{ font }}</a>
                                 </li>
                               </ul>
                             </div>

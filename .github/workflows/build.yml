@@ -1,0 +1,32 @@
+name: Build & Create image
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log in with Azure
+        uses: azure/login@v1
+        with:
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: azure/docker-login@v1
+        with:
+         login-server: srregistry88.azurecr.io
+         username: ${{ secrets.REGISTRY_USERNAME }}
+         password: ${{ secrets.REGISTRY_PASSWORD }}
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+            node-version: 20
+            cache: 'npm'
+      - run: npm install --legacy-peer-deps
+      - run: npm run-script build
+      - run:  docker build -t eddieui .
+      - run:  docker tag eddieui srregistry88.azurecr.io/eddieui
+      - run: |
+         docker push srregistry88.azurecr.io/eddieui
+      

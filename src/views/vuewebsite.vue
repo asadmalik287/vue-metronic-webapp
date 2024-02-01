@@ -1,5 +1,6 @@
 <template>
   <section>
+
     <div class="container-fluid p-0 m-auto">
       <div id="website-builder" class="d-flex mx-0 justify-content-between">
         <div class="p-0">

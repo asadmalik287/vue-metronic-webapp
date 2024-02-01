@@ -405,8 +405,8 @@
                             <div class="d-flex align-items-center justify-content-between">
                               <p class="fs-12 mb-0 text-grey">Font Color</p>
                               <input type="color" v-model="bodyFontColor" @input="updateStyling"
-                                class="form-control form-control-color p-0 formInput border-0 fs-12"
-                                style='border-radius:0px !important;' value="#555555" title="Choose your color" />
+                                class="form-control bg-dark form-control-color p-0 formInput border-0 fs-12"
+                                style='border-radius:0px !important;' value="#000" title="Choose your color" />
                             </div>
                           </li>
                           <li class="p-2">
@@ -437,8 +437,8 @@
                             <div>
                               <p class="fs-12 mb-2 text-grey">Background Color</p>
                               <input type="color" v-model="backgroundRepeat" @change="updateStyling"
-                                class="w-100 mb-3 form-control form-control-color p-0 formInput bgsecondary border-0 fs-12"
-                                value="#555555" title="Choose your color" />
+                                class="w-100 mb-3 form-control form-control-color p-0 formInput bg-dark border-0 fs-12"
+                                value="#000" title="Choose your color" />
                             </div>
                             <!-- Background Image -->
 
@@ -461,6 +461,15 @@
                               <option value="Bottom" class="fs-12">Bottom</option>
                               <option value="Left" class="fs-12">Left</option>
                               <option value="Right" class="fs-12">Right</option>
+                              <option value="left top" class="fs-12">Left top</option>
+                              <option value="left center" class="fs-12">Left center</option>
+                              <option value="left bottom" class="fs-12">Left bottom</option>
+                              <option value="right top" class="fs-12">Right top</option>
+                              <option value="right center" class="fs-12">Right center</option>
+                              <option value="right bottom" class="fs-12">Right bottom</option>
+                              <option value="center top" class="fs-12">Center top</option>
+                              <option value="center center" class="fs-12">Center Center</option>
+                              <option value="center bottom" class="fs-12">Center bottom</option>
                             </select>
                           </li>
                           <li class="p-2">
@@ -487,37 +496,6 @@
                               <option value="Custom" class="fs-12">Custom</option>
                             </select>
                           </li>
-                          <!-- <li class="p-2">
-                            <p class="fs-12 mb-0 text-grey pb-2">Background Default</p>
-                            <select class="form-select bagDark border-0 text-white formInput w-100 fs-12"
-                              aria-label="Default select example">
-                              <option selected>-</option>
-                              <option value="1" class="fs-12"></option>
-                              <option value="Solid color" class="fs-12">
-                                Solid color
-                              </option>
-                              <option onselect="myFunction()" value="Radial gradient" class="fs-12">
-                                Radial gradient
-                              </option>
-                              <option value="Horizontal gradient" class="fs-12">
-                                Horizontal gradient
-                              </option>
-                              <option value="Vertical gradient" class="fs-12">
-                                Vertical gradient
-                              </option>
-                              <option value="Angle gradient" class="fs-12">
-                                Angle gradient
-                              </option>
-                            </select>
-                            <div class="d-flex">
-                              <input type="color"
-                                class="form-control form-control-color p-0 formInput bgWhite border-0 fs-12 mt-2 me-1"
-                                id="exampleColorInput" value="#ffffff" title="Choose your color" />
-                              <input type="color"
-                                class="form-control form-control-color p-0 formInput bgWhite border-0 fs-12 mt-2 ms-1"
-                                id="exampleColorInput" value="#ffffff" title="Choose your color" />
-                            </div>
-                          </li> -->
                         </ul>
                       </div>
                     </div>
@@ -669,8 +647,8 @@
                           <div class="d-flex align-items-center justify-content-between">
                             <p class="fs-12 mb-0">Font Color</p>
                             <input type="color" v-model="h1FontColor" @input="updateStyling"
-                              class="form-control form-control-color p-0 formInput bg-black border-0 fs-12"
-                              id="exampleColorInput" value="#222222" title="Choose your color" />
+                              class="form-control form-control-color  p-0 formInput bg-dark border-0 fs-12"
+                              id="exampleColorInput" value="#000" title="Choose your color" />
                           </div>
                         </li>
                         <li class="p-2 mt-1">
